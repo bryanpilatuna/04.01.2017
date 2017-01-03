@@ -1,31 +1,62 @@
-import pygame.sys
+# Importamos la librería
+import pygame
+
+import sys
+
+# Creamos un reloj
+Reloj= pygame.time.Clock()
+
+
+# Importamos constantes locales de pygame
 from pygame.locals import *
-from random import randint
 
+# Iniciamos Pygame
 pygame.init()
-ventana = pygame.display.set_mode((600,300))
-mi_imagen=pygame.image.load("ball.gif")
-posX=200
-posY=100
-velocidad=5
-Blanco=(255,255,255)
-derecha=true
 
-while true:
-    ventana.fill(Blanco)
-    ventana.blit(mi_imagen,(posX,posY))
-    for event in pygame.event.get():
-        if event.type==QUIT:
-            pygame.quit()
-            sys.exit()
-        elif event.type==pygame.KEYDOWN:
-            if event.key==K_LEFT:
-               posX-=velocidad
-            elif event.key==K_RIGHT:
-                pos+=velocidad
-        elif event.type==pygame.KEYUP:
-            if event.key==K_LEFT:
-                print ("Teclaizquierda")
-            elif event.key==K_RIGHT:
-                print ("tecla derecha")
-                
+# Creamos una surface (la ventana de juego), asignándole un alto y un ancho
+Ventana = pygame.display.set_mode((600, 400))
+
+# Le ponemos un título a la ventana
+pygame.display.set_caption("Moviendo Imágenes")
+
+# Cargamos las imágenes
+Fondo = pygame.image.load("fondo.jpg")
+Imagen = pygame.image.load("Mario.png")
+
+coordX = 300
+coordY = 200
+Coordenadas = (coordX, coordY)
+
+incrementoX = 0
+incrementoY = 0
+
+# Bucle infinito para mantener el programa en ejecución
+while True:
+
+    Ventana.blit(Fondo, (0, 0))
+    Ventana.blit(Imagen, Coordenadas)    
+    pygame.display.flip()
+
+   # Manejador de eventos
+    for evento in pygame.event.get():
+        # Pulsación de la tecla escape
+        if evento.type == pygame.KEYDOWN:
+            if evento.key == pygame.K_ESCAPE:
+                sys.exit()
+            elif evento.key == pygame.K_RIGHT:
+                incrementoX = 5
+            elif evento.key == pygame.K_DOWN:
+                incrementoY = 5
+            elif evento.key == pygame.K_LEFT:
+                incrementoX = -5
+            elif evento.key == pygame.K_UP:
+                incrementoY = -5
+        if evento.type == pygame.KEYUP:
+            incrementoX = 0
+            incrementoY = 0
+
+    coordX = coordX + incrementoX
+    coordY = coordY + incrementoY
+
+    Coordenadas = (coordX, coordY)
+

@@ -1,57 +1,225 @@
-
-a=125
-
+from turtle import *
 import turtle
+turtle.setup(1300, 600)
+pencolor("white")
+right(180)
+forward(270)
+right(180)
 
-##CUADRADO GRANDE 
-t= turtle.Pen()
-def micuadrado(a):
-    for x in range (1,5):
-        t.forward(a)
-        t.left(90)
-micuadrado(a)
-##CUADRADO PEQUEÑO
-t.goto(31.25,31.25)
-b=50
+#Letra B
+for i in range(4):
+    pencolor("red")
+    forward(100)
+    right(-90)
 
-def micuadrado(b):
-    for x in range (1,5):
-        t.forward(b)
-        t.left(90)
-micuadrado(b)
-##CUADRADO ABAJO
+forward(20)
+right(-90)
+pencolor("white")
+forward(20)
+right(90)
 
-c=150
-t.goto(0,0)
-def micuadrado(c):
-    for x in range (1,5):
-        t.forward(c)
-        t.left(-90)
-micuadrado(c)
-##Cuadrado pequeño abajo
-t.goto(0,0)
-t.goto(37.5,-37.5)
-d=75
+for i in range(4):
+    pencolor("red")
+    forward(60)
+    right(-90)
 
-def micuadrado(d):
-    for x in range (1,5):
-        t.forward(d)
-        t.left(-90)
-micuadrado(d)
+right(90)
+pencolor("white")
+forward(20)
+right(90)
 
-## r
+pencolor("red")
+forward(20)
+right(-90)
 
-t.goto(200,-100)
-e=75
-def r(e):
-    for x in range (1,2):
-        t.forward(e)
-        t.left(90)
-r(e)
-t.goto(200,-100)
-t.goto(200,-150)
-# Y
+for i in range(3):
+    pencolor("red")
+    forward(100)
+    right(-90)
+
+pencolor("red")
+forward(20)
+right(-90)
+
+pencolor("white")
+forward(20)
+
+for i in range(4):
+    pencolor("red")
+    forward(60)
+    right(90)
+
+right(180)
+pencolor("white")
+forward(20)
+right(90)
+
+pencolor("red")
+forward(20)
+right(-90)
+
+pencolor("red")
+forward(100)
+right(90)
+
+pencolor("white")
+forward(20)
+right(90)
+
+#Letra R
+
+for i in range(4):
+    pencolor("red")
+    forward(100)
+    right(-90)
+
+forward(20)
+right(-90)
+
+pencolor("white")
+forward(20)
+
+for i in range(4):
+    pencolor("red")
+    forward(60)
+    right(90)
+
+right(180)
+pencolor("white")
+forward(20)
+right(-90)
+
+pencolor("red")
+forward(180)
+right(-90)
+
+forward(20)
+right(-90)
+
+forward(80)
+right(135)
+
+forward(120)
+right(-90)
+
+forward(20)
+right(-90)
+
+forward(130)
+right(135)
+
+pencolor("white")
+forward(170)
+right(90)
+
+#Letra Y
+
+pencolor("red")
+forward(100)
+right(-90)
+
+forward(20)
+right(-90)
+
+forward(100)
+right(30)
+
+forward(130)
+right(-90)
+
+forward(20)
+right(-90)
+
+forward(115)
+right(120)
+
+forward(115)
+right(-90)
+
+forward(20)
+right(-90)
+
+forward(130)
+right(120)
+
+pencolor("white")
+forward(170)
+right(-90)
+
+forward(105)
+right(-90)
+
+forward(220)
+##Letra A
+pencolor("red")
+forward(40)
+right(-60)
+
+forward(60)
+pencolor("white")
+forward(40)
 
 
+pencolor("red")
+for i in range(3):
+    forward(40)
+    right(120)
 
-turtle.getscreen()._root.mainloop()
+right(180)
+pencolor("white")
+forward(40)
+right(-120)
+
+pencolor("red")
+forward(80)
+right(60)
+
+forward(60)
+right(-60)
+
+forward(40)
+right(-120)
+
+forward(220)
+right(-120)
+
+forward(220)
+right(330)
+
+pencolor("white")
+forward(5)
+right(-90)
+
+forward(250)
+
+#Letra N
+##Letra N
+pencolor("red")
+forward(20)
+right(-90)
+
+forward(180)
+right(150)
+
+forward(210)
+right(-60)
+
+forward(20)
+right(-90)
+
+forward(200)
+right(-90)
+
+forward(20)
+right(-90)
+
+forward(170)
+right(150)
+
+forward(200)
+right(-60)
+
+forward(25)
+right(-90)
+
+forward(205)
